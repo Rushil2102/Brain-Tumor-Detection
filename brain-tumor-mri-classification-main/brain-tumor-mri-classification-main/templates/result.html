@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/bg.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+</head>
+<body>
+    {%include 'navbar.html' %}
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <div class="image-container">
+            <img src="{{ image_url }}" alt="Uploaded Image">
+        </div>
+        
+        <div class="prediction-info">
+            <p>Predicted Class: {{ predicted_class }}</p>
+            <p>Class Probabilities:</p>
+            <ul>
+                <li>Normal: {{ class_probabilities[0] }}</li>
+                <li>Glioma: {{ class_probabilities[1] }}</li>
+                <li>Meningioma: {{ class_probabilities[2] }}</li>
+                <li>Pituitary: {{ class_probabilities[3] }}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

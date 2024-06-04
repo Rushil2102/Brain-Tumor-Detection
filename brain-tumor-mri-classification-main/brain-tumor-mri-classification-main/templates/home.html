@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braincare.org</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* Custom CSS for gradient background */
+        .gradient-background {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/static/images/doc3.png');
+            background-size: cover;
+            background-position:top center;
+            color: #fff;
+            padding: 250px 0; /* Adjust padding as needed */
+            text-align: center;
+            position: relative;
+        }
+        /* Button styles */
+        .btn-trial {
+            position: absolute;
+            bottom: 100px; /* Adjust position as needed */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* Testimonials section styles */
+        /* Testimonials section styles */
+.testimonials {
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+.testimonial {
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+.testimonial-image {
+    width: 200px; /* Set the width to your desired size */
+    height: 200px; /* Set the height to your desired size */
+    
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto; /* Centers the image horizontally */
+    object-fit: cover; /* Ensures the image covers the specified dimensions */
+}
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0; /* Adjust padding as needed */
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <!-- Gradient background with text and button -->
+    <section class="gradient-background">
+        <div class="container">
+            <h1>Welcome to Braincare.org</h1>
+            <h2>"<i>Unlocking</i> the potential of medical technology, Braincare empowers institutions to seamlessly track brain tumors, pioneering precision healthcare solutions for a brighter future."
+            </h2>
+            <a href="{{url_for('upload_file')}}" class="btn btn-primary btn-lg btn-trial">Start Trial</a>
+        </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <!-- Testimonials section -->
+<section class="testimonials">
+    <div class="container">
+        <h2>Testimonials</h2>
+        <!-- Testimonial 1 -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <img src="/static/images/l1.png" alt="Testimonial Image" class="testimonial-image">
+                    <p>"I cannot express my gratitude enough to Zydus Hospital for their exceptional care and expertise. From the moment I walked in, I felt reassured by their professionalism and dedication to patient well-being. The doctors and staff went above and beyond to ensure I received the best treatment possible. I highly recommend Zydus Hospital to anyone in need of medical care."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <img src="/static/images/l3.png" alt="Testimonial Image" class="testimonial-image">
+                    <p>"My experience at Apollo Hospitals was nothing short of excellent. The facilities are state-of-the-art, and the medical team is highly skilled and compassionate. They took the time to listen to my concerns and provided personalized care that exceeded my expectations. I am grateful to Apollo Hospitals for their commitment to patient-centered healthcare."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <img src="/static/images/l2.png" alt="Testimonial Image" class="testimonial-image">
+                    <p>"I recently had the privilege of being treated at Mount Sinai Hospital, and I must say, the experience was exceptional. From the moment I stepped through the doors, I was greeted with warmth and professionalism. The medical staff demonstrated unparalleled expertise and compassion throughout my entire journey. Their dedication to patient care is truly remarkable. I am deeply grateful to Mount Sinai for their unwavering commitment to excellence in healthcare."
+
+
+
+
+
+
+                    </p>
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Braincare.org. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
